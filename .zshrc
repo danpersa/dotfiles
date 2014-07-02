@@ -53,4 +53,5 @@ export MAVEN_OPTS="-Xmx1048m -Xms256m -XX:MaxPermSize=312M -Denforcer.skip=true"
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 export PATH=$M2:$PATH
 export PATH=$PATH:$HOME/.rvm/bin
-
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=712M -XX:MaxPermSize=1024M"
+alias glast="glog -1 | cat"
