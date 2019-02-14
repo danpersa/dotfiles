@@ -46,12 +46,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-# export JAVA_HOME=/usr/libexec/java_home
-export M2_HOME=/Users/dpersa/sdk/apache-maven-3.0.5
-export M2=$M2_HOME/bin
-export MAVEN_OPTS="-Xmx1048m -Xms256m -XX:MaxPermSize=312M -Denforcer.skip=true"
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-export PATH=$M2:$PATH
-export PATH=$PATH:$HOME/.rvm/bin
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=712M -XX:MaxPermSize=1024M"
+export JAVA_HOME=`/usr/libexec/java_home`
+
+export CREDENTIALS_DIR="$HOME/Credentials"
+export GOPATH=$HOME/Prog/go
+export PATH=$PATH:$GOPATH/bin:$JAVA_HOME/bin
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source <(zkubectl completion zsh)
+
 alias glast="glog -1 | cat"
