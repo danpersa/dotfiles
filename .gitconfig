@@ -1,16 +1,10 @@
 [user]
-	name = Dan Persa
-	email = dan.persa@gmail.com
+    name = Dan Persa
+    email = dan.persa@gmail.com
 [push]
         default = simple
 [core]
         excludesfile = /Users/dpersa/.gitignore_global
-[difftool "sourcetree"]
-        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-        path =
-[mergetool "sourcetree"]
-        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-        trustExitCode = true
 [alias]
   co = checkout
   ci = commit
@@ -19,3 +13,4 @@
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
+
